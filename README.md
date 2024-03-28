@@ -1,6 +1,6 @@
 # AgricultureDataset-SensorSuiteBuild
 
-1. ## LIDAR driver installation (Ouster)
+## 1. LIDAR driver installation (Ouster)
   1) Install the official driver (to ur ros directory)
      git clone --recurse-submodules https://github.com/ouster-lidar/ouster-ros.git
      catkin_make -DCMAKE_BUILD_TYPE=Release  
@@ -24,7 +24,7 @@
      source devel/setup.bash
      roslaunch ouster_ros sensor.launch sensor_hostname:=192.168.254.101
 
-2. ## IMU driver installation (3dm-gx5-ahrs)
+## 2. IMU driver installation (3dm-gx5-ahrs)
 
 
       
