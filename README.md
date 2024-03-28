@@ -24,4 +24,7 @@
      source devel/setup.bash
      roslaunch ouster_ros sensor.launch sensor_hostname:=192.168.254.101
 
+2. ## IMU driver installation (3dm-gx5-ahrs)
+
+
       
