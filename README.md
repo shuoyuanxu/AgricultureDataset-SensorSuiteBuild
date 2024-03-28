@@ -54,5 +54,6 @@ source ~/catkin_ws/devel/setup.bash
 ```
   ##### 3) Connect the imu and test the driver
   a. Change device permission: ```sudo chmod 666 /dev/ttyACM0```
+  
   b. Run the testing script: ```roslaunch microstrain_inertial_driver microstrain.launch```
 
