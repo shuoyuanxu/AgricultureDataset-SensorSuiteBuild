@@ -31,7 +31,7 @@
   ``` http http://169.254.217.248/api/v1/system/network/ipv4/override ``` 
   to double check if IP is static, if the last line of the output shows 192.168.254.101/24, means setting succeed.
 
-     not sure what it does: 
+  not sure what it does: 
   ``` export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libGLdispatch.so.0:$LD_PRELOAD ```
  
   c. run the visulisation to validate the installation
