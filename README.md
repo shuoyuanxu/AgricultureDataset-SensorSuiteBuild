@@ -9,10 +9,12 @@
      e.g. 192.168.254.150 & Netmask 255.255.255.0 then disable IPv6
      
   b. check lidar ip to make sure its using IPv4 and static address:
+  
      ```
      avahi-browse -lr _roger._tcp
      http http://169.254.217.248/api/v1/system/network/ipv4/override
      ```
+     
      ##### null means its not static
      use
      ```echo \"192.168.254.101/24\" | http PUT http://169.254.217.248/api/v1/system/network/ipv4/override```
