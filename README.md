@@ -108,9 +108,10 @@ GPSD_OPTIONS=""
 DEVICES="/dev/ttyACM0"
 USBAUTO="true"
 ```
-Then
-sudo systemctl restart gpsd
 
+Then
+```
+sudo systemctl restart gpsd
 catkin_makesource ~/catkin_ws/devel/setup.bash
 ```
 
