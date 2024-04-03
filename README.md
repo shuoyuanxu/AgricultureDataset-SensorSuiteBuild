@@ -5,8 +5,10 @@
      ```git clone --recurse-submodules https://github.com/ouster-lidar/ouster-ros.git```
      ```catkin_make -DCMAKE_BUILD_TYPE=Release```
   #### 2) Give your lidar a fixed IP
-      a. go into settings, network cable setting, give IPv4 a manual address e.g. 192.168.254.150 & Netmask 255.255.255.0 then disable IPv6
-      b. check lidar ip to make sure its using IPv4 and static address:
+  a. go into settings, network cable setting, give IPv4 a manual address 
+     e.g. 192.168.254.150 & Netmask 255.255.255.0 then disable IPv6
+     
+  b. check lidar ip to make sure its using IPv4 and static address:
      ```
      avahi-browse -lr _roger._tcp
      http http://169.254.217.248/api/v1/system/network/ipv4/override
@@ -22,7 +24,7 @@
 
      not sure what it does: ``` export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libGLdispatch.so.0:$LD_PRELOAD ```
  
-      c. run the visulisation to validate the installation
+    c. run the visulisation to validate the installation
      ```
      source devel/setup.bash
      roslaunch ouster_ros sensor.launch sensor_hostname:=192.168.254.101
@@ -53,9 +55,9 @@ catkin_make
 source ~/catkin_ws/devel/setup.bash
 ```
   ##### 3) Connect the imu and test the driver
-    a. Change device permission: ```sudo chmod 666 /dev/ttyACM0```
+  a. Change device permission: ```sudo chmod 666 /dev/ttyACM0```
   
-    b. Run the testing script: ```roslaunch microstrain_inertial_driver microstrain.launch```
+  b. Run the testing script: ```roslaunch microstrain_inertial_driver microstrain.launch```
 
 
 ## 3. GNSS driver installation (F9P)
