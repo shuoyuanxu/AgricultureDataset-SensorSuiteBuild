@@ -101,7 +101,7 @@ source ~/catkin_ws/devel/setup.bash
 sudo apt-get install gpsd gpsd-clients python-gps
 sudo apt-get install ros-noetic-serial
 ```
-Change the gpsd config file: nano /etc/default/gpsd
+Change the gpsd config file: ```nano /etc/default/gpsd```
 ```
 START_DAEMON="true"
 GPSD_OPTIONS=""
