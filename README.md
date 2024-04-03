@@ -28,7 +28,7 @@
      roslaunch ouster_ros sensor.launch sensor_hostname:=192.168.254.101
      ```
 ## 2. IMU driver installation (3dm-gx5-ahrs)
-  1) Install the official driver (to ros workspace)
+  ##### 1) Install the official driver (to ros workspace)
      a.
      ```
      git clone --recursive --branch ros https://github.com/LORD-MicroStrain/microstrain_inertial.git
