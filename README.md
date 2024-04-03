@@ -57,3 +57,5 @@ source ~/catkin_ws/devel/setup.bash
   
   b. Run the testing script: ```roslaunch microstrain_inertial_driver microstrain.launch```
 
+
+## 3. GNSS driver installation (F9P)
