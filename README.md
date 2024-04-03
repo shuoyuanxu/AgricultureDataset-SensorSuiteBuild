@@ -96,12 +96,22 @@ source ~/catkin_ws/devel/setup.bash
  sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
  ```
 
-  ##### 2) for my case, the imu driver requires a full clean of the ros workspace:
+  ##### 2) Install Drivers:
 ```
-catkin init
-catkin clean -y --workspace ~/catkin_ws
-catkin_make
-source ~/catkin_ws/devel/setup.bash
+sudo apt-get install gpsd gpsd-clients python-gps
+sudo apt-get install ros-noetic-serial
+```
+Change the gpsd config file: nano /etc/default/gpsd
+```
+START_DAEMON="true"
+GPSD_OPTIONS=""
+DEVICES="/dev/ttyACM0"
+USBAUTO="true"
+```
+Then
+sudo systemctl restart gpsd
+
+catkin_makesource ~/catkin_ws/devel/setup.bash
 ```
 
   ##### 3) Connect the GNSS receiver and test the driver
