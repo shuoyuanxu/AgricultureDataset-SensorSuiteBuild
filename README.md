@@ -98,7 +98,7 @@ source ~/catkin_ws/devel/setup.bash
 
   ##### 2) Install Drivers:
 ```
-sudo apt-get install gpsd gpsd-clients python-gps
+sudo apt-get install gpsd gpsd-clients
 sudo apt-get install ros-noetic-serial
 ```
 Change the gpsd config file: ```nano /etc/default/gpsd```
@@ -109,10 +109,16 @@ DEVICES="/dev/ttyACM0"
 USBAUTO="true"
 ```
 
-Then
+Then test the driver with gpsd
 ```
 sudo systemctl restart gpsd
-catkin_makesource ~/catkin_ws/devel/setup.bash
+sudo service gpsd restart
+cgps
+```
+
+Install nmea_navsat_driver 
+```
+sudo apt-get install ros-noetic-nmea-navsat-driver
 ```
 
   ##### 3) Connect the GNSS receiver and test the driver
@@ -125,9 +131,11 @@ catkin_makesource ~/catkin_ws/devel/setup.bash
   ```
   rosrun nmea_navsat_driver nmea_serial_driver _port:=/dev/ttyACM0 _baud:=9600
   ```
-
-
-
+  c. Run the Ros node:
+  ```
+  rosrun gpsd_client gpsd_client
+  rostopic echo /fix
+  ```
 
 
 
