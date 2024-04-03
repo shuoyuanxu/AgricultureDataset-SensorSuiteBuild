@@ -97,29 +97,29 @@ source ~/catkin_ws/devel/setup.bash
  ```
 
   ##### 2) Install Drivers:
-```
-sudo apt-get install gpsd gpsd-clients
-sudo apt-get install ros-noetic-serial
-```
-Change the gpsd config file: ```nano /etc/default/gpsd```
-```
-START_DAEMON="true"
-GPSD_OPTIONS=""
-DEVICES="/dev/ttyACM0"
-USBAUTO="true"
-```
-
-Then test the driver with gpsd
-```
-sudo systemctl restart gpsd
-sudo service gpsd restart
-cgps
-```
-
-Install nmea_navsat_driver 
-```
-sudo apt-get install ros-noetic-nmea-navsat-driver
-```
+  ```
+  sudo apt-get install gpsd gpsd-clients
+  sudo apt-get install ros-noetic-serial
+  ```
+  Change the gpsd config file: ```nano /etc/default/gpsd```
+  ```
+  START_DAEMON="true"
+  GPSD_OPTIONS=""
+  DEVICES="/dev/ttyACM0"
+  USBAUTO="true"
+  ```
+  
+  Then test the driver with gpsd
+  ```
+  sudo systemctl restart gpsd
+  sudo service gpsd restart
+  cgps
+  ```
+  
+  Install nmea_navsat_driver 
+  ```
+  sudo apt-get install ros-noetic-nmea-navsat-driver
+  ```
 
   ##### 3) Connect the GNSS receiver and test the driver
   a. Change device permission: 
