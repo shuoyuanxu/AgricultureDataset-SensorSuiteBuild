@@ -78,15 +78,20 @@ source ~/catkin_ws/devel/setup.bash
 ## 3. GNSS driver installation (F9P)
   ##### 1) Config the receiver using U-center
   a. View > Configuration View
+  
   b. MSG (Messages), enable USB
   ```
   $GxGGA: Essential fix data which provides 3D location and accuracy data.
   $GxGLL: Geographic position, latitude/longitude, and time of position fix.
   $GxRMC: Recommended minimum specific GPS/Transit data, which includes
   ```
-  c. CFG (configuration), Save current configuration, send
+
+  c. CFG (configuration), Save current configuration, Send
+  
   d. Receiver > Action > Save Config
+  
   e. Double checking by going back to MSG
+  
 
   ##### 2) Install Drivers:
   ```
