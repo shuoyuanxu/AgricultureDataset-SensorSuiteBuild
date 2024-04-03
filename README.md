@@ -110,9 +110,9 @@ source ~/catkin_ws/devel/setup.bash
   sudo chmod 666 /dev/ttyACM0
   sudo chmod a+rw /dev/ttyACM0
   ```
-  b. Run the testing script: 
+  b. Run the NMEA serial script: 
   ```
-  roslaunch microstrain_inertial_driver microstrain.launch
+  rosrun nmea_navsat_driver nmea_serial_driver _port:=/dev/ttyACM0 _baud:=9600
   ```
 
 
