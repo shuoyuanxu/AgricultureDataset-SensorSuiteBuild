@@ -135,4 +135,17 @@ source ~/catkin_ws/devel/setup.bash
   ```
 
 
+## 3. Theta V driver installation 
+  ##### 1) Config the Camera
+  
+  ##### 2) Install Drivers:
+  
+  ##### 3) Connect the Camera and test the driver
+  a. 
+  ```
+  source ~/devel/setup.bash
+  sudo modprobe v4l2loopback
+  ```
+  
+
 
