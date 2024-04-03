@@ -31,18 +31,18 @@
      ```
 ## 2. IMU driver installation (3dm-gx5-ahrs)
   ##### 1) Install the official driver (to ros workspace)
-     a.
+  a.
      ```
      git clone --recursive --branch ros https://github.com/LORD-MicroStrain/microstrain_inertial.git
      catkin_make
      ```
-     b. remember to install the missing libraries
+  b. remember to install the missing libraries
      ```
      sudo apt-get install ros-noetic-nmea-msgs
      sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
      sudo apt-get install libgeographic-dev)
      ```
-     c. Change ros source if needed
+  c. Change ros source if needed
        ```
        sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
        sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
