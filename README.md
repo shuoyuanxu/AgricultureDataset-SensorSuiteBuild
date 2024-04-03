@@ -24,7 +24,7 @@
 
      not sure what it does: ``` export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libGLdispatch.so.0:$LD_PRELOAD ```
  
-    c. run the visulisation to validate the installation
+  c. run the visulisation to validate the installation
      ```
      source devel/setup.bash
      roslaunch ouster_ros sensor.launch sensor_hostname:=192.168.254.101
