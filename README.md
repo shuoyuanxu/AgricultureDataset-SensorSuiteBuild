@@ -27,13 +27,14 @@
   ``` http http://169.254.217.248/api/v1/system/network/ipv4/override ``` 
   to double check if IP is static, if the last line of the output shows 192.168.254.101/24, means setting succeed.
 
-     not sure what it does: ``` export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libGLdispatch.so.0:$LD_PRELOAD ```
+     not sure what it does: 
+  ``` export LD_PRELOAD=/usr/lib/aarch64-linux-gnu/libGLdispatch.so.0:$LD_PRELOAD ```
  
   c. run the visulisation to validate the installation
-     ```
-     source devel/setup.bash
-     roslaunch ouster_ros sensor.launch sensor_hostname:=192.168.254.101
-     ```
+   ```
+   source devel/setup.bash
+   roslaunch ouster_ros sensor.launch sensor_hostname:=192.168.254.101
+   ```
 ## 2. IMU driver installation (3dm-gx5-ahrs)
   ##### 1) Install the official driver (to ros workspace)
   a.
