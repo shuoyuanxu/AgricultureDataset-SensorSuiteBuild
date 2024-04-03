@@ -23,7 +23,8 @@
   ##### for my lidar, it gives:
   HTTPConnectionPool(host='169.254.217.248', port=80): Max retries exceeded with url: /api/v1/system/network/ipv4/override (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f5a7f332be0>: Failed to establish a new connection: [Errno 113] No route to host',))
      in IPv4 setting, give the pc a closer address, such as 169.254.217.150 then following echo... command should pass, change it back to 192.168.254.150 if necessary. During this, LIDAR and PC may need to be restarted multiple times.
-     once finished, run 
+  
+  once finished, run 
   ``` http http://169.254.217.248/api/v1/system/network/ipv4/override ``` 
   to double check if IP is static, if the last line of the output shows 192.168.254.101/24, means setting succeed.
 
@@ -35,6 +36,7 @@
    source devel/setup.bash
    roslaunch ouster_ros sensor.launch sensor_hostname:=192.168.254.101
    ```
+
 ## 2. IMU driver installation (3dm-gx5-ahrs)
   ##### 1) Install the official driver (to ros workspace)
   a.
@@ -55,6 +57,7 @@
  sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
  sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
  ```
+
   ##### 2) for my case, the imu driver requires a full clean of the ros workspace:
 ```
 catkin init
@@ -62,6 +65,7 @@ catkin clean -y --workspace ~/catkin_ws
 catkin_make
 source ~/catkin_ws/devel/setup.bash
 ```
+
   ##### 3) Connect the imu and test the driver
   a. Change device permission: ```sudo chmod 666 /dev/ttyACM0```
   
@@ -69,3 +73,9 @@ source ~/catkin_ws/devel/setup.bash
 
 
 ## 3. GNSS driver installation (F9P)
+
+
+
+
+
+
