@@ -77,24 +77,16 @@ source ~/catkin_ws/devel/setup.bash
 
 ## 3. GNSS driver installation (F9P)
   ##### 1) Config the receiver using U-center
-  a.
- ```
- git clone --recursive --branch ros https://github.com/LORD-MicroStrain/microstrain_inertial.git
- catkin_make
- ```
-     
-  b. remember to install the missing libraries
- ```
- sudo apt-get install ros-noetic-nmea-msgs
- sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
- sudo apt-get install libgeographic-dev)
- ```
-     
-  c. Change ros source if needed
- ```
- sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'
- sudo apt-key adv --keyserver 'hkp://keyserver.ubuntu.com:80' --recv-key C1CF6E31E6BADE8868B172B4F42ED6FBAB17C654
- ```
+  a. View > Configuration View
+  b. MSG (Messages), enable USB
+  ```
+  $GxGGA: Essential fix data which provides 3D location and accuracy data.
+  $GxGLL: Geographic position, latitude/longitude, and time of position fix.
+  $GxRMC: Recommended minimum specific GPS/Transit data, which includes
+  ```
+  c. CFG (configuration), Save current configuration, send
+  d. Receiver > Action > Save Config
+  e. Double checking by going back to MSG
 
   ##### 2) Install Drivers:
   ```
