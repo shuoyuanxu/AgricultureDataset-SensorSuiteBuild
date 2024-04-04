@@ -137,7 +137,7 @@ source ~/catkin_ws/devel/setup.bash
 
 ## 3. Theta V driver installation 
   ##### 1) Config the Camera
-
+  Put the camera into live streaming mode
   ##### 2) Install Drivers:
   a. Camera driver
   ```
@@ -153,10 +153,6 @@ source ~/catkin_ws/devel/setup.bash
   git clone https://github.com/ricohapi/libuvc-theta-sample.git
   cd libuvc-theta-sample/gst
   make
-  
-  # THETA must be plugged into your computer and in 
-  # live streaming mode
-  
   $ ./gst_viewer
   ```
   b. Camera Ros Node
