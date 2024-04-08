@@ -156,6 +156,17 @@ source ~/catkin_ws/devel/setup.bash
   $ ./gst_viewer
   ```
   b. Install dependencies
+  #### libptp (use ptpcam --help to verify installation)
+  ```
+  cd libptp2-1.2.0
+  ./configure
+  make
+  sudo make install
+  chmod +x /home/shuoyuan/catkin_ws/src/ricoh_theta_ros/deps/libptp/src/.libs/ptpcam
+  sudo cp /home/shuoyuan/catkin_ws/src/ricoh_theta_ros/deps/libptp/src/.libs/ptpcam /usr/local/bin/
+  sudo ln -s /home/shuoyuan/catkin_ws/src/ricoh_theta_ros/deps/libptp/src/.libs/ptpcam /usr/local/bin/.libs/ptpcam
+  ```
+
   #### libptp
   ```
   cd libptp2-1.2.0
@@ -163,7 +174,6 @@ source ~/catkin_ws/devel/setup.bash
   make
   sudo make install
   ```
-
 
   c. Camera Ros Node (remember to replace the libptp in dependency to the newest version since the one included is for ARM processors)
   ```
