@@ -155,7 +155,17 @@ source ~/catkin_ws/devel/setup.bash
   make
   $ ./gst_viewer
   ```
-  b. Camera Ros Node (remember to replace the libptp in dependency to the newest version since the one included is for ARM processors)
+  b. Install dependencies
+  libptp
+  ```
+  cd libptp2-1.2.0
+  ./configure
+  make
+  sudo make install
+  ```
+
+
+  c. Camera Ros Node (remember to replace the libptp in dependency to the newest version since the one included is for ARM processors)
   ```
   git -C src clone --recursive https://github.com/madjxatw/ricoh_theta_ros.git
   catkin_make
