@@ -158,23 +158,30 @@ source ~/catkin_ws/devel/setup.bash
   b. Install dependencies
   #### libptp (use ptpcam --help to verify installation)
   ```
+  sudo apt-get install libusb-dev libusb-0.1-4
   cd libptp2-1.2.0
-  ./configure
+  ./configure --with-libusbdir=/usr
   make
   sudo make install
   chmod +x /home/shuoyuan/catkin_ws/src/ricoh_theta_ros/deps/libptp/src/.libs/ptpcam
   sudo cp /home/shuoyuan/catkin_ws/src/ricoh_theta_ros/deps/libptp/src/.libs/ptpcam /usr/local/bin/
-  sudo ln -s /home/shuoyuan/catkin_ws/src/ricoh_theta_ros/deps/libptp/src/.libs/ptpcam /usr/local/bin/.libs/ptpcam
+  export PATH=$PATH:/home/shuoyuan/catkin_ws/src/ricoh_theta_ros/deps/libptp/src/.libs
+  sudo apt-get install ros-noetic-cv-camera
   ```
 
-  #### libptp
+  #### Cannot find ricoh
   ```
-  cd libptp2-1.2.0
-  ./configure
-  make
-  sudo make install
+  export PATH=$PATH:/home/shuoyuan/catkin_ws/src/ricoh_theta_ros/utils
+  or
+  sudo cp /home/shuoyuan/catkin_ws/src/ricoh_theta_ros/ricoh_theta_ros/utils/ricoh /usr/local/bin/ricoh
+  sudo chmod +x /usr/local/bin/ricoh
   ```
 
+  #### Error: Cannot identify device '/dev/video1'
+  ![image](https://github.com/shuoyuanxu/AgricultureDataset-SensorSuiteBuild/assets/21218812/1f020893-c99f-41b6-89b8-061ce20b9431)
+
+
+  
   c. Camera Ros Node (remember to replace the libptp in dependency to the newest version since the one included is for ARM processors)
   ```
   git -C src clone --recursive https://github.com/madjxatw/ricoh_theta_ros.git
