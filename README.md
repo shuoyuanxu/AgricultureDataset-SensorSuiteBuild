@@ -156,7 +156,7 @@ source ~/catkin_ws/devel/setup.bash
   $ ./gst_viewer
   ```
   b. Install dependencies
-  libptp
+  #### libptp
   ```
   cd libptp2-1.2.0
   ./configure
