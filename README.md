@@ -198,6 +198,10 @@ source ~/catkin_ws/devel/setup.bash
   rosrun ricoh_theta_ros start.sh
   rqt_image_view
   ```
+
+  ##### 4) Shell and roslaunch for all sensors
+  rosrun sensorsuite sensorsuite.sh
+
   
 
 
