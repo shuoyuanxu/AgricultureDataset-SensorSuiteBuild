@@ -1,0 +1,29 @@
+<launch>
+    <!-- Camera node with a delayed continuation for other processes -->
+    <node pkg="ricoh_theta_ros" type="start.sh" name="ricoh_theta_v_camera" output="screen"
+          launch-prefix="bash -c 'sleep 10; exec $0 $@'">
+        <!-- Camera node parameters here -->
+    </node>
+
+    <!-- Use the <group> tag with a delay implemented through the launch-prefix attribute -->
+    <group if="true" launch-prefix="bash -c 'sleep 10; exec $0 $@'">
+        <!-- Ouster LIDAR -->
+        <include file="$(find ouster_ros)/launch/sensor.launch">
+            <arg name="sensor_hostname" value="192.168.254.101"/>
+        </include>
+        
+        <!-- IMU 3DM-GX5-45 -->
+        <include file="$(find microstrain_inertial_driver)/launch/microstrain.launch">
+        </include>
+        
+        <!-- GNSS F9P -->
+        <node name="gpsd_client" pkg="gpsd_client" type="gpsd_client" output="screen">
+            <!-- Additional parameters can be specified here if needed -->
+        </node>
+    </group>       
+    
+    <!-- Rosbag Recording -->
+    <!-- Customize topics as needed -->
+    <node name="record" pkg="rosbag" type="record" args="-o /home/shuoyuan/my_sensor_data.bag  /ouster/points /imu/data /fix /theta_cam/image_raw" output="screen"/>
+</launch>
+
