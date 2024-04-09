@@ -181,7 +181,7 @@ source ~/catkin_ws/devel/setup.bash
   ![image](https://github.com/shuoyuanxu/AgricultureDataset-SensorSuiteBuild/assets/21218812/1f020893-c99f-41b6-89b8-061ce20b9431)
 
   #### [ERROR] [1712656572.447247469]: cv camera open failed: device_id0 cannot be opened
-  the source code of the ricoh node is not giving enough time for gst_loopback to fully initilise (maybe a less powerfully computer wouldnt have the same issue). 
+  The source code of the ricoh node is not giving enough time for gst_loopback to fully initilise (maybe a less powerfully computer wouldnt have the same issue). Adding a sleep time behind gst_loopback solves it.
   ![image](https://github.com/shuoyuanxu/AgricultureDataset-SensorSuiteBuild/assets/21218812/84a24942-88d7-4d2d-8170-9aff01ab2b14)
 
   c. Camera Ros Node (remember to replace the libptp in dependency to the newest version since the one included is for ARM processors)
