@@ -196,6 +196,7 @@ source ~/catkin_ws/devel/setup.bash
   sudo modprobe v4l2loopback
   export PATH=$PATH:/home/shuoyuan/catkin_ws/src/ricoh_theta_ros/deps/libuvc-theta-sample/gst
   rosrun ricoh_theta_ros start.sh
+  rqt_image_view
   ```
   
 
