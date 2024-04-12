@@ -189,6 +189,10 @@ source ~/catkin_ws/devel/setup.bash
   git -C src clone --recursive https://github.com/madjxatw/ricoh_theta_ros.git
   catkin_make
   ```
+
+  #### Choppy and Laggy stream
+  
+
   ##### 3) Connect the Camera and test the driver
   a. 
   ```
