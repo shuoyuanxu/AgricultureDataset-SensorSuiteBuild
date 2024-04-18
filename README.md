@@ -208,6 +208,17 @@ source ~/catkin_ws/devel/setup.bash
   rqt_image_view
   ```
 
+  b. Use these settings to avoid lags and freezes
+  ```
+  	if (strcmp(cmd_name, "gst_loopback") == 0)
+  		pipe_proc = "decodebin ! autovideoconvert ! "
+  			"video/x-raw,format=I420 ! identity drop-allocation=true !"
+  			"v4l2sink device=/dev/video0 qos=false sync=false";
+  	else
+  		pipe_proc = " decodebin ! glimagesink qos=false sync=false";
+  
+  ```
+
   ##### 4) Shell and roslaunch for all sensors
   rosrun sensorsuite sensorsuite.sh
 
