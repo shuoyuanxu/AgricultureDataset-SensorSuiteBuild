@@ -219,6 +219,11 @@ source ~/catkin_ws/devel/setup.bash
   
   ```
 
+  c. resolution can be reduced as follows:
+  ```
+      pipe_proc = "decodebin ! videoconvert ! videoscale ! video/x-raw,width=1280,height=720,format=I420 ! x264enc tune=zerolatency ! rtph264pay ! udpsink host=example.com port=5000 qos=false sync=false";
+  ```
+
   ##### 4) Shell and roslaunch for all sensors
   rosrun sensorsuite sensorsuite.sh
 
