@@ -245,3 +245,14 @@ source ~/catkin_ws/devel/setup.bash
   ```
   rosrun sensorsuite sensorsuite.sh 
   ```
+
+## 5. Setting up LIO-SAM
+  ##### 1) Installation
+  ```
+  cd ~/catkin_ws/src
+  git clone https://github.com/TixiaoShan/LIO-SAM.git
+  cd ..
+  catkin_make
+  ```
+  a) Change the following line to enable PCL compatibility:
+  ```set(CMAKE_CXX_FLAGS "-std=c++11")``` to ```set(CMAKE_CXX_FLAGS "-std=c++14")```
