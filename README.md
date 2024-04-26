@@ -228,5 +228,18 @@ source ~/catkin_ws/devel/setup.bash
   rosrun sensorsuite sensorsuite.sh
 
   
+## 4. Launch script 
+  ##### 1) Source catkin workspace and master
+  ```
+  sudo nano .bashsrc
+  add these at the end
+      # >>> fishros initialize >>>
+      source /opt/ros/noetic/setup.bash
+      source /home/shuoyuan/catkin_driver_ws/devel/setup.bash
+      # <<< fishros initialize <<<
+      #ROS_IP=192.168.254.150
+      #ROS_MASTER_URI=http://192.168.1.102:11311
+  source .bashrc
+  ```
 
 
