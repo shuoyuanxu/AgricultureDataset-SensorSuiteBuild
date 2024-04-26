@@ -256,3 +256,10 @@ source ~/catkin_ws/devel/setup.bash
   ```
   a) Change the following line to enable PCL compatibility:
   ```set(CMAKE_CXX_FLAGS "-std=c++11")``` to ```set(CMAKE_CXX_FLAGS "-std=c++14")```
+  b) Modify line to avoid: imuPreintegration.cpp:214:100: error: conversion from ‘std::shared_ptr<gtsam::PreintegrationParams>’ to non-scalar type ‘boost::shared_ptr<gtsam::PreintegrationParams>’ requested'
+  ```boost::shared_ptr<gtsam::PreintegrationParams> p = gtsam::PreintegrationParams::MakeSharedU(imuGravity);``` to ```std::shared_ptr<gtsam::PreintegrationParams> p = gtsam::PreintegrationParams::MakeSharedU(imuGravity);```
+  c) Install related libs:
+  ```
+  sudo apt-get install ros-noetic-robot-localization
+  ```
+  
