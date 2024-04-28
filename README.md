@@ -265,3 +265,6 @@ source ~/catkin_ws/devel/setup.bash
   sudo apt-get install ros-noetic-robot-localization
   ```
   
+  d) Set the system to use sim time:
+  ```rosparam set use_sim_time true```
+  
