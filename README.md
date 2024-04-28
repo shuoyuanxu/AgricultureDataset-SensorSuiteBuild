@@ -267,4 +267,5 @@ source ~/catkin_ws/devel/setup.bash
   
   d) Set the system to use sim time:
   ```rosparam set use_sim_time true```
-  
+
+  e) Try different "extrinsicRot" and extrinsicRPY in "params.yaml
