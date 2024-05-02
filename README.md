@@ -45,6 +45,11 @@
   source ~/.bashrc
   ```
 
+  ##### When running across 2 PCs: Bond broken, exiting REQUIRED process [os_node-2] has died!
+  The issue comes from time synchronisation, disable bond:   
+  ```<arg name="no_bond" default="true"``` should solve the issue.
+
+
 ## 2. IMU driver installation (3dm-gx5-ahrs)
   ##### 1) Install the official driver (to ros workspace)
   a.
