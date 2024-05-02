@@ -246,7 +246,7 @@ source ~/catkin_ws/devel/setup.bash
       #ROS_MASTER_URI=http://192.168.1.102:11311
   source .bashrc
   ```
-  ##### 2) Launch sensors then recording (keep all sensors running, record as needed)
+  ##### 2) Launch sensors then recording (keep all sensors running, record when needed)
   ```
   rosrun sensorsuite sensorsuite.sh
   roslaunch sensorsuite recordstart.launch
