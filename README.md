@@ -271,3 +271,6 @@ source ~/catkin_ws/devel/setup.bash
   ```rosparam set use_sim_time true```
 
   e) Try different "extrinsicRot" and extrinsicRPY in "params.yaml
+
+  f) View point cloud
+  ```pcl_viewer lio_sam_map.pcd```
