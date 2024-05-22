@@ -1,4 +1,5 @@
 # AgricultureDataset-SensorSuiteBuild
+![image](https://github.com/shuoyuanxu/AgricultureDataset-SensorSuiteBuild/assets/21218812/1ee2e615-6324-438d-b9b5-473787312e21)
 
 ## 1. LIDAR driver installation (Ouster)
   #### 1) Install the official driver (to ros workspace)
