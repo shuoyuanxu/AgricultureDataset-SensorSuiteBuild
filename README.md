@@ -306,3 +306,13 @@ source ~/catkin_ws/devel/setup.bash
 
   f) View point cloud
   ```pcl_viewer lio_sam_map.pcd```
+
+
+## 6. Connecting to Antobot
+  ##### 1) ssh into antobot
+  ```
+  antobot
+  password
+  ip 192.168.1.102
+  ```
+  
