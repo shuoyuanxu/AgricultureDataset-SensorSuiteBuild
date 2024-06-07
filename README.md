@@ -280,8 +280,8 @@ source ~/catkin_ws/devel/setup.bash
   roslaunch sensorsuite recordstart.launch
   ```
 
-## 5. Setting up LIO-SAM
-  ##### 1) Installation
+## 5. Setting up SLAM algorithm
+  ##### 1) LIO-SAM
   ```
   cd ~/catkin_ws/src
   git clone https://github.com/TixiaoShan/LIO-SAM.git
@@ -306,6 +306,13 @@ source ~/catkin_ws/devel/setup.bash
 
   f) View point cloud
   ```pcl_viewer lio_sam_map.pcd```
+
+  ##### 2) DSO
+  a) 
+  b) Save pcd 
+  ```
+  rosservice call /robot/dlo_map/save_pcd 0.2 "/home/shuoyuan/output"
+  ```
 
 
 ## 6. Connecting to Antobot
