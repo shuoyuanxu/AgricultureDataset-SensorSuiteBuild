@@ -308,7 +308,10 @@ source ~/catkin_ws/devel/setup.bash
   ```pcl_viewer lio_sam_map.pcd```
 
   ##### 2) DSO
-  a) 
+  a) Run
+  ```
+  roslaunch direct_lidar_odometry dlo.launch
+  ```
   b) Save pcd 
   ```
   rosservice call /robot/dlo_map/save_pcd 0.2 "/home/shuoyuan/output"
