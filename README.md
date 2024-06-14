@@ -260,6 +260,10 @@ source ~/catkin_ws/devel/setup.bash
   ```
   pipe_proc = "decodebin ! videoconvert ! videoscale ! video/x-raw,width=1280,height=720,format=I420 ! x264enc tune=zerolatency ! rtph264pay ! udpsink host=example.com port=5000 qos=false sync=false";
   ```
+  ```
+pipe_proc = "decodebin ! videoconvert ! videoscale ! video/x-raw,width=1920,height=960,format=I420 ! identity tune=zerolatency ! "
+    "v4l2sink device=/dev/video0 qos=false sync=false";
+  ```
   
 ## 4. Launch script 
   ##### 1) Source catkin workspace and master
