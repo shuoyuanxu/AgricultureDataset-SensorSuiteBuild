@@ -283,6 +283,11 @@ pipe_proc = "decodebin ! videoconvert ! videoscale ! video/x-raw,width=1920,heig
   rosrun sensorsuite sensorsuite.sh
   roslaunch sensorsuite recordstart.launch
   ```
+  ##### 3) When IMU is not responding, try unplug then plugin the IMU or change the IMU USB ID here:
+  ```
+  rosrun sensorsuite sensorsuite.sh
+  roslaunch sensorsuite recordstart.launch
+  ```
 
 ## 5. Setting up SLAM algorithm
   ##### 1) LIO-SAM
