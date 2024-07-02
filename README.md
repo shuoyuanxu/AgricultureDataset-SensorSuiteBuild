@@ -290,7 +290,9 @@ Before running the script, connect the lidar, 360 camera, and IMU to the NUC. To
   /home/shuoyuan/catkin_driver_ws/src/microstrain_inertial/microstrain_inertial_driver/microstrain_inertial_driver_common/config/params.yml
   ```
   replacing ```ttyACM1 to ttyACM0``` or vice versa
-
+  
+  ##### 4) Please restart the PC once a recording is finished to avoid the buffering issue of the IMU.
+  
 ## 6. Setting up SLAM algorithm
   ##### 1) LIO-SAM
   ```
