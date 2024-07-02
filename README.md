@@ -177,7 +177,7 @@ source ~/catkin_ws/devel/setup.bash
   ```
 
 
-## 3. Theta V driver installation 
+## 4. Theta V driver installation 
   ##### 1) Config the Camera
   Put the camera into live streaming mode
   ##### 2) Install Drivers:
@@ -265,7 +265,7 @@ pipe_proc = "decodebin ! videoconvert ! videoscale ! video/x-raw,width=1920,heig
     "v4l2sink device=/dev/video0 qos=false sync=false";
   ```
   
-## 4. Launch script 
+## 5. Launch script 
 Before running the script, connect the lidar, 360 camera, and IMU to the NUC. Toggle the mode button (3rd side button from the top) to live video mode.	
   ##### 1) Source catkin workspace and master
   ```
@@ -290,7 +290,7 @@ Before running the script, connect the lidar, 360 camera, and IMU to the NUC. To
   ```
   replacing ```ttyACM1 to ttyACM0``` or vice versa
 
-## 5. Setting up SLAM algorithm
+## 6. Setting up SLAM algorithm
   ##### 1) LIO-SAM
   ```
   cd ~/catkin_ws/src
@@ -328,7 +328,7 @@ Before running the script, connect the lidar, 360 camera, and IMU to the NUC. To
   ```
 
 
-## 6. Connecting to Antobot
+## 7. Connecting to Antobot
   ##### 1) ssh into antobot
   ```
   antobot
