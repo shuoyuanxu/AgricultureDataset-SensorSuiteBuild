@@ -266,6 +266,7 @@ pipe_proc = "decodebin ! videoconvert ! videoscale ! video/x-raw,width=1920,heig
   ```
   
 ## 4. Launch script 
+Before running the script, connect the lidar, 360 camera, and IMU to the NUC. Toggle the mode button (3rd side button from the top) to live video mode.	
   ##### 1) Source catkin workspace and master
   ```
   sudo nano .bashsrc
