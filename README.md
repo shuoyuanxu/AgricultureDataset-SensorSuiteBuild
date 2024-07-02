@@ -291,7 +291,7 @@ Before running the script, connect the lidar, 360 camera, and IMU to the NUC. To
   ```
   replacing ```ttyACM1 to ttyACM0``` or vice versa
   
-  ##### 4) ```diff -Please restart the PC once a recording is finished to avoid the buffering issue of the IMU.```
+  ##### NOTE!!! ```Restart the PC once a recording is finished to avoid buffering issues of the IMU.```
   
 ## 6. Setting up SLAM algorithm
   ##### 1) LIO-SAM
