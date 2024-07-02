@@ -270,13 +270,14 @@ Before running the script, connect the lidar, 360 camera, and IMU to the NUC. To
   ##### 1) Source catkin workspace and master
   ```
   sudo nano .bashsrc
-  add these at the end
+  uncomment last 2 lines 
       # >>> fishros initialize >>>
       source /opt/ros/noetic/setup.bash
       source /home/shuoyuan/catkin_driver_ws/devel/setup.bash
+      source /home/shuoyuan/catkin_code_ws/devel/setup.bash
       # <<< fishros initialize <<<
-      #ROS_IP=192.168.254.150
-      #ROS_MASTER_URI=http://192.168.1.102:11311
+      # export ROS_IP=192.168.1.150
+      # export ROS_MASTER_URI=http://192.168.1.102:11311
   source .bashrc
   ```
   ##### 2) Launch sensors then recording (keep all sensors running, record when needed)
