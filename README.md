@@ -285,9 +285,9 @@ pipe_proc = "decodebin ! videoconvert ! videoscale ! video/x-raw,width=1920,heig
   ```
   ##### 3) When IMU is not responding, try unplug then plugin the IMU or change the IMU USB ID here:
   ```
-  rosrun sensorsuite sensorsuite.sh
-  roslaunch sensorsuite recordstart.launch
+  /home/shuoyuan/catkin_driver_ws/src/microstrain_inertial/microstrain_inertial_driver/microstrain_inertial_driver_common/config/params.yml
   ```
+  replacing ```ttyACM1 to ttyACM0``` or vice versa
 
 ## 5. Setting up SLAM algorithm
   ##### 1) LIO-SAM
