@@ -338,4 +338,5 @@ Before running the script, connect the lidar, 360 camera, and IMU to the NUC. To
   password
   ip 192.168.1.102
   ```
+  Run the bringup script (1 with tagslam another without)
   
