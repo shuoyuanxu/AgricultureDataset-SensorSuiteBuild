@@ -320,7 +320,7 @@ Before running the script, connect the lidar, 360 camera, and IMU to the NUC. To
   f) View point cloud
   ```pcl_viewer lio_sam_map.pcd```
 
-  g) fixing ##Point cloud is not in dense format, please remove NaN points first! ##
+  g) fixing Point cloud is not in dense format, please remove NaN points first!
 
   add
   ```
