@@ -354,4 +354,5 @@ Before running the script, connect the lidar, 360 camera, and IMU to the NUC. To
 192.168.1.105 lucas-nuc and password
   ```
   Run the bringup script (1 with tagslam another without)
+![image](https://github.com/user-attachments/assets/0deb5b48-158e-4fb6-aaad-c24dd5ff7210)
   
