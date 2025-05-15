@@ -349,9 +349,12 @@ Before running the script, connect the lidar, 360 camera, and IMU to the NUC. To
 
 
 ## 7. Connecting to Antobot
-  ##### 1) ssh into antobot
+  ##### 1) List of IP
   ```
-192.168.1.105 lucas-nuc and password
+192.168.1.105 lucas-nuc
+192.168.1.102 URCU
+192.168.1.150 shuoyuan (NUC)
+192.168.1.103 antoscout1 (jetson)
   ```
   Run the bringup script (1 with tagslam another without)
 ![image](https://github.com/user-attachments/assets/0deb5b48-158e-4fb6-aaad-c24dd5ff7210)
