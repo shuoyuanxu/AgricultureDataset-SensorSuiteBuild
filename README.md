@@ -359,3 +359,9 @@ Before running the script, connect the lidar, 360 camera, and IMU to the NUC. To
   Run the bringup script (1 with tagslam another without)
 ![image](https://github.com/user-attachments/assets/0deb5b48-158e-4fb6-aaad-c24dd5ff7210)
   
+## 8. Calibration
+ #### 1) LiDAR-to-LiDAR extrinsic calibration
+  Use the docker version of this library: https://github.com/TUMFTM/Multi_LiCa
+  Dont forget to ``` source /ros_ws/install/setup.bash``` 
+  before running ```ros2 launch multi_lidar_calibrator calibration.launch.py```
+  Ensure to put lidar_1.pcd and lidar2_pcd into data/demo, no other setting need to be changed
