@@ -83,10 +83,13 @@ Here they will ask for username and password, use token as your password instead
 
 
 ## 2. IMU driver installation (3dm-gx5-ahrs)
-  ##### 1) Install the official driver (to ros workspace)
+  ##### 1) Install the official driver (to ros workspace, checked out version is tested to work with our system)
   a.
  ```
- git clone --recursive --branch ros https://github.com/LORD-MicroStrain/microstrain_inertial.git
+ git clone --recursive https://github.com/LORD-MicroStrain/microstrain_inertial.git
+ cd microstrain_inertial
+ git checkout 0a50a6f
+ git submodule update --init --recursive
  catkin_make
  ```
      
